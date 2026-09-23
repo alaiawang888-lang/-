@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: capitol-tracker
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/status
+    envVars:
+      - key: POLL_SECONDS
+        value: 300
